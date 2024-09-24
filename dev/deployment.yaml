@@ -6,14 +6,14 @@ spec:
   selector:
     matchLabels:
       app: myapp
-  replicas: 2
+  replicas: 4
   template:
     metadata:
       labels:
         app: myapp
     spec:
       containers:
-      - name: myapp
-        image: nanajanashia/argocd-app:1.2
-        ports:
-        - containerPort: 8080
+        - name: myapp
+          image: nanajanashia/argocd-app:1.2
+          ports:
+            - containerPort: 8080
